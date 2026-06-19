@@ -1,98 +1,124 @@
 @import "design_token.css";
 
 body {
-  background-color: var(--bg-main);
-  padding: 40px;
   display: flex;
   justify-content: center;
+  padding: 40px;
+  background-color: var(--bg-main);
 }
 
 .navbar * {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-self: center;
-  color: var(--text-primary);
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
   width: min-content;
   height: min-content;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  list-style: none;
+  color: var(--text-primary);
   font-family: var(--font-main);
-  gap: 0px;
+  font-size: 16px;
+  flex-shrink: 0;
 }
+
 .navbar {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 60px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition:
+    width 0.5s ease,
+    height 0.5s ease;
 }
+
+.navbar:hover {
+  width: 290px;
+  height: 366px;
+}
+
+.navbar__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  gap: var(--space-sm);
+  background-color: var(--bg-surface);
+}
+
 .navbar__title__logo {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 7px);
+  grid-template-rows: repeat(2, 7px);
   width: 14px;
   height: 14px;
 }
+
 .logo__element {
   width: 5px;
   height: 5px;
-  background-color: var(--action-bg);
   border-radius: 1px;
+  background-color: var(--action-bg);
 }
 
-.navbar__title__text {
-  font-size: 16px;
-  font-weight: 500;
-}
-.navbar__title {
-  width: 200px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-sm);
-  background-color: var(--bg-surface);
-  border-radius: var(--radius-md);
-  transition:
-    width 0.3s ease,
-    border-radius 0.3s ease;
-}
-.navbar__menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 290px;
-  height: 0px;
-  transition:
-    width 0.3s ease,
-    height 0.3s ease;
-}
-.menu__item__button * {
-  display: none;
-}
-.menu__item__button {
-  width: 290px;
-  height: 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-sm);
-  background-color: var(--bg-surface);
-  transition:
-    width 0.3s ease,
-    height 0.3s ease;
-  border-style: none;
-}
-.navbar__title:hover {
-  width: 290px;
-
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-}
 .navbar__title:hover .logo__element {
   transform: rotate(45deg);
   transition: transform 0.3s ease;
 }
-.navbar:has(.navbar__title:hover) .menu__item__button,
-.navbar__menu {
 
-  height: 70px;
+.navbar .navbar__title__text-container {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  overflow: hidden;
+}
+
+.navbar .navbar__title__text {
+  height: 20px;
+  transition: transform 0.5s ease;
+}
+
+.navbar:hover .navbar__title__text {
+  transform: translateY(-20px);
+}
+
+.navbar__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.menu__item {
+  width: 100%;
+  border-top: solid 1px var(--bg-surface-light);
+}
+
+.menu__item__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - var(--space-md) * 2);
+  height: 60px;
+  padding: 0 var(--space-md);
+  gap: var(--space-sm);
+  border-style: none;
+  background-color: var(--bg-surface);
+  text-decoration: none;
+  transition: height 0.3s ease;
+}
+
+.menu__item__button * {
+  width: max-content;
+}
+
+.button__icon {
+  width: 40px;
+  height: 40px;
 }
