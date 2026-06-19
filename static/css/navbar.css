@@ -1,0 +1,66 @@
+@import "design_token.css";
+
+body {
+  background-color: var(--bg-main);
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar * {
+  display: flex;
+  justify-self: center;
+  color: var(--text-primary);
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  width: min-content;
+  height: min-content;
+  font-family: var(--font-main);
+  gap: 0px;
+}
+.navbar__title__logo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 14px;
+  height: 14px;
+}
+.logo__element {
+  width: 5px;
+  height: 5px;
+  background-color: var(--action-bg);
+  border-radius: 1px;
+}
+
+.navbar__title__text {
+  font-size: 16px;
+  font-weight: 500;
+}
+.navbar__title {
+  width: 200px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  background-color: var(--bg-surface);
+  border-radius: var(--radius-md);
+  transition:
+    width 0.3s ease,
+    height 0.3s ease,
+    border-radius 0.3s ease;
+}
+.navbar__menu {
+  flex-direction: column;
+}
+.navbar__title:hover {
+  width: 290px;
+  height: 70px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.navbar__title:hover .logo__element {
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}

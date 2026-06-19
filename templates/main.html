@@ -4,8 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SKILLFORGE</title>
+    <link rel="stylesheet" href="../static/css/navbar.css" />
   </head>
   <body>
-    </p>
+    <navbar class="navbar">
+      <logo class="navbar__title">
+        <div class="navbar__title__logo logo">
+          <div class="logo__element"></div>
+          <div class="logo__element"></div>
+          <div class="logo__element"></div>
+          <div class="logo__element"></div>
+        </div>
+        <p class="navbar__title__text">Основное</p>
+      </logo>
+      <!--при наведении меняется на Меню-->
+      <ul class="navbar__menu menu">
+        <li class="menu__item">
+          <button class="menu__item__button button" href="/main">
+            <div class="button__text">Основное</div>
+            <img class="button__icon" src="" alt="" />
+          </button>
+        </li>
+        <li class="menu__item">
+          <button class="menu__item__button button" href="/orders">
+            <div class="button__text">Заказы</div>
+            <img class="button__icon" src="" alt="" />
+          </button>
+        </li>
+        <li class="menu__item">
+          <button class="menu__item__button button" href="/applications">
+            <div class="button__text">Заявки</div>
+            <img class="button__icon" src="" alt="" />
+          </button>
+        </li>
+        <li class="menu__item">
+          <button class="menu__item__button button" href="/my_profile">
+            <div class="button__text">Мой профиль</div>
+            <img class="button__icon" src="" alt="" />
+          </button>
+        </li>
+        <li class="menu__item">
+          <button class="menu__item__button button" href="/about">
+            <div class="button__text">О нас</div>
+            <img class="button__icon" src="" alt="" />
+          </button>
+        </li>
+      </ul>
+    </navbar>
   </body>
 </html>
