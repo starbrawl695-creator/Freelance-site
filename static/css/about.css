@@ -1,9 +1,14 @@
 /* Переопределяем ломающее правило из main.css */
+/* 1. Исправляем сжатие текста (избавляемся от min-content) */
 html body * {
     width: auto;
     height: auto;
 }
 
+html body {
+    height: auto;           /* Сбрасывает фиксированные 5000px */
+    min-height: 100vh;      /* Растягивает фон под высоту экрана */
+}
 
 .about__us__main {
     margin-left: 240px; /* Отступ под ширину вашей навигации */
