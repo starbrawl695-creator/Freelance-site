@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="../static/css/navbar.css" />
     <link rel="stylesheet" href="../static/css/often_obj.css" />
     <link rel="stylesheet" href="../static/css/main.css" />
+    <link rel="stylesheet" href="../static/css/design_token.css" />
+    <link rel="stylesheet" href="../static/css/register.css" />
+    <link rel="stylesheet" href="../static/css/register-modal.css" />
   </head>
   <body>
     <!-- Навигационная панель -->
@@ -75,6 +78,15 @@
             />
           </a>
         </li>
+        <li class="menu__item">
+          <button
+            class="menu__item__button button"
+            type="button"
+            id="registerOpenBtn"
+          >
+            <div class="button__text">Регистрация</div>
+          </button>
+        </li>
       </ul>
     </navbar>
     <div
@@ -94,8 +106,74 @@
         </p>
       </div>
     </div>
+
+    <!-- Модальное окно регистрации -->
+    <div class="register-modal-overlay is-open" id="registerModalOverlay">
+      <div class="register-window">
+          &times;
+        </button>
+
+        <h1 class="register-window__title">Регистрация аккаунта</h1>
+
+        <div class="register-window__field">
+          <label class="register-window__label" for="email">Почта</label>
+          <input
+            class="register-window__input"
+            type="email"
+            id="email"
+            placeholder="Введите почту"
+          />
+        </div>
+
+        <div class="register-window__field">
+          <label class="register-window__label" for="fullname">ФИО</label>
+          <input
+            class="register-window__input"
+            type="text"
+            id="fullname"
+            placeholder="Введите ФИО"
+          />
+        </div>
+
+        <div class="register-window__field">
+          <label class="register-window__label" for="password">Пароль</label>
+          <input
+            class="register-window__input"
+            type="password"
+            id="password"
+            placeholder="Введите пароль"
+          />
+        </div>
+
+        <div class="register-window__field">
+          <input
+            class="register-window__input"
+            type="password"
+            id="password-confirm"
+            placeholder="Подтвердите пароль"
+          />
+        </div>
+
+        <button class="register-window__submit" type="button">
+          Зарегистрироваться
+        </button>
+
+        <button class="register-window__yandex" type="button">
+          <img
+            class="register-window__yandex-icon"
+            src="../static/media/sistem-media/yandex.png"
+            alt="Яндекс"
+          />
+          Продолжить с Яндекс
+        </button>
+
+        <p class="register-window__footer">
+          Уже есть аккаунт? <a class="register-window__link" href="#">Войти</a>
+        </p>
+      </div>
+    </div>
+    <script src="../static/js/register-modal.js"></script>
+    <script src="../static/js/realtime.js"></script>
+    <script src="../static/js/shleif_cursor.js"></script>
   </body>
-  <script src="../static/js/realtime.js"></script>
-  <script src="../static/js/shleif_cursor.js"></script>
 </html>
-Ï
